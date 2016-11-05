@@ -57,6 +57,7 @@ function makeHobbits() {
   
   hobbitList.appendChild(listItems);}
   theShire.appendChild(hobbitList);
+  return listItems;
 
 
 
@@ -72,7 +73,7 @@ function keepItSecretKeepItSafe() {
   ring.setAttribute("id", "the-ring");
   // create a div with an id of 'the-ring'
   ring.setAttribute("class", "magic-imbued-jewelry");
-  console.log(ring);
+  
   // give the div a class of 'magic-imbued-jewelry'
   ring.addEventListener("click", nazgulScreech);
   var frodo = document.querySelector("li");
@@ -95,8 +96,8 @@ function makeBuddies() {
       var buddyItems = document.createElement("li");
       buddyItems.innerText = buddies[i];
       buddiesList.appendChild(buddyItems);}
-    asiide.appendChild(buddiesList);
-    Rivendell.appendChild(asiide);
+    /*asiide.appendChild(buddiesList);*/
+    Rivendell.appendChild(buddiesList);
       return Rivendell;
 
   // attach an unordered list of the 'buddies' in the aside
@@ -130,8 +131,9 @@ function beautifulStranger() {
 beautifulStranger()
 
 // Part 6
-
+var boutaLeaveShire = makeHobbits()
 function leaveTheShire() {
+  Rivendell.appendChild(listItems);
   // assemble the hobbits and move them to Rivendell
 }
 
