@@ -103,15 +103,15 @@ function makeBuddies() {
   // attach an unordered list of the 'buddies' in the aside
   // insert your aside as a child element of rivendell
 }
- var Rivendell = makeBuddies(); 
- console.log(Rivendell);
+ var globalRivendell = makeBuddies(); 
+ 
 
 
 // Part 5
 
 
 function beautifulStranger() {
-  var findList = document.querySelectorAll("li");
+  var findList = globalRivendell.querySelectorAll("li");
   findList.forEach(function(li) {
     if (li.textContent == 'Strider')
       li.textContent = 'Aragorn';
